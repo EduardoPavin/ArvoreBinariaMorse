@@ -15,11 +15,14 @@ public class PainelArvore extends JPanel {
     }
 
     private void desenharNo(Graphics g, No no, int x, int y, int espacamento) {
+
         if (no != null) {
             g.setColor(Color.DARK_GRAY);
             String texto = no.caractere != null ? no.caractere.toString() : "*";
             g.drawOval(x - 15, y - 15, 30, 30);
             g.drawString(texto, x - 5, y + 5);
+
+
 
             if (no.esquerdo != null) {
                 // desenha linha para o filho esquerdo
@@ -29,6 +32,8 @@ public class PainelArvore extends JPanel {
                 // Chama recursivamente para o filho esquerdo
                 desenharNo(g, no.esquerdo, xEsq, yEsq, espacamento / 2);
             }
+
+
 
             if (no.direito != null) {
                 // desenha linha para o filho direito

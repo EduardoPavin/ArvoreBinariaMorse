@@ -8,7 +8,8 @@ public class ArvoreBinariaMorse {
 
     // Inserir Caractere
 
-    //percorre a arvore, se for . move para o esquerdo, se for - move para o direito (se não existir cria um novo nó)
+    //percorre a arvore, se for . move para o esquerdo, se for - move para o direito
+    //(se não existir cria um novo nó)
     // no final é inserido o caractere
     public void inserir(String codigoMorse, char caractere) {
         No atual = raiz;
