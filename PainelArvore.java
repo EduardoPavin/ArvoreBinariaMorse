@@ -16,7 +16,7 @@ public class PainelArvore extends JPanel {
 
     private void desenharNo(Graphics g, No no, int x, int y, int espacamento) {
         if (no != null) {
-            g.setColor(Color.BLACK);
+            g.setColor(Color.DARK_GRAY);
             String texto = no.caractere != null ? no.caractere.toString() : "*";
             g.drawOval(x - 15, y - 15, 30, 30);
             g.drawString(texto, x - 5, y + 5);

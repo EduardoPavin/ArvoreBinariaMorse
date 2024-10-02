@@ -7,6 +7,9 @@ public class ArvoreBinariaMorse {
     }
 
     // Inserir Caractere
+
+    //percorre a arvore, se for . move para o esquerdo, se for - move para o direito (se não existir cria um novo nó)
+    // no final é inserido o caractere
     public void inserir(String codigoMorse, char caractere) {
         No atual = raiz;
         for (char simbolo : codigoMorse.toCharArray()) {
@@ -27,7 +30,13 @@ public class ArvoreBinariaMorse {
         atual.caractere = caractere;
     }
 
-    // buscar um caracter na arvore
+
+
+
+    // buscar um caracter na arvore, se for . move para o esquerdo, se for - move para o direito
+    //percorre a arvore simbolo por simbolo
+    //algum nó durante o percurso for null, a função retorna null (feito pq o morse vai ser invalido)
+    //caso tenha sucesso retorna o correspondente
     public Character buscar(String codigoMorse) {
         No atual = raiz;
         for (char simbolo : codigoMorse.toCharArray()) {
@@ -50,6 +59,8 @@ public class ArvoreBinariaMorse {
 
 
     // decodificar Morse
+    //usa o buscar para encontrar o caractere correspondente
+    //se o caractere não for encontrado adiciona um ?
     public String decodificarMensagem(String mensagemMorse) {
         StringBuilder resultado = new StringBuilder();
         String[] codigos = mensagemMorse.trim().split("\\s+"); // Divide por espaços em branco

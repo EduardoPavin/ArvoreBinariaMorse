@@ -1,4 +1,6 @@
 public class No {
+
+    //caractere atual
     public Character caractere;
     public No esquerdo;
     public No direito;

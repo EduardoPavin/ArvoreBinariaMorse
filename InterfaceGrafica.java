@@ -152,7 +152,7 @@ public class InterfaceGrafica extends JFrame{
     private void exibirArvore() {
         JFrame frameArvore = new JFrame("Visualização da Árvore");
         frameArvore.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
-        frameArvore.setSize(800, 600);
+        frameArvore.setSize(1300, 600);
 
         PainelArvore painelArvore = new PainelArvore(arvore);
         frameArvore.getContentPane().add(painelArvore);
